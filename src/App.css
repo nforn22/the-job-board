@@ -1,15 +1,18 @@
 body {
-    background: #e5e5e5;
+    background: white;
     margin: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
 .header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 8px 0;
+    padding: 15px 0;
 }
 
 .footer {
@@ -17,11 +20,13 @@ body {
     text-align: center;
     padding: 8px 0;
     background-color: #d3d3d3;
+    margin-top: auto;
 }
 
 .jobs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 30px;
     margin: 40px auto;
     max-width: 960px;
@@ -29,23 +34,27 @@ body {
 }
 
 .job {
+    display: flex;
     background: white;
     border: 4px solid #d3d3d3;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center; 
     padding: 10px;
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    min-height: 200px;
 }
 
 .job h2 {
-    margin-top: 0;
-    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    line-height: 1.2;
 }
 
 .job p {
-    font-size: 0.9em; 
+    font-size: 0.9em;
 }
 
 .job.red { border-color: #e60026; }
