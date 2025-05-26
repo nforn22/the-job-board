@@ -63,4 +63,36 @@ body {
 .job.blue { border-color: #0099ff; }
 .job.pink { border-color: #ffb6b6; }
 
+/* tablette par ex: 2 colonnes */
+@media (max-width: 768px) {
+    .jobs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 600px;
+    }
+}
+
+/* mobile par ex: 1 colonne */
+@media (max-width: 480px) {
+    .jobs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+    
+    .job {
+        min-height: 180px;
+        padding: 15px;
+    }
+    
+    .job h2 {
+        font-size: 1em;
+    }
+    
+    .job p {
+        font-size: 0.8em;
+    }
+}
+
 
